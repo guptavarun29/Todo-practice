@@ -1,0 +1,5 @@
+<%= form_for([@todo_list , @todo_list.todo_items.build], :authenticity_token => false) do |f| %>
+<%= f.text_field :content , placeholder: "write the content here"  %>
+<%= f.submit  %>
+<% end %>
+ <!--form_for([@todo_list  , @todo_list.todo_items.new]) -->
