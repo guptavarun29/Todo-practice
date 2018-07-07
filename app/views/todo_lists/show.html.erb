@@ -10,12 +10,18 @@
   <%= @todo_list.description %>
 </p>
 
+<hr />
+
 <div id="todo_items_wrapper">
-	<%= render @todo_list.todo_items %>
-	<form><%= render "todo_items/form"%></form>
+  <ul>
+    <% @todo_list.todo_items.each do |t| %>
+      <li>
+        <%= t.content %>
+      </li>
+    <% end %>
+  </ul>
+	<%= render "todo_items/form"%>
 </div>
 <%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
 <%= link_to 'Back', todo_lists_path %>
 <!-- we can use loop to accesss todo_item-->
-
-
