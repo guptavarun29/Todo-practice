@@ -15,14 +15,14 @@
 		</div>
 		<div class="trash">
 			<%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
-				<i class="fa fa-trash">Delete</i>
+				<i class="fa fa-trash"></i>
 			<% end %>
 		</div>
 	<% else %>
 		<div class="complete">
 			<%= link_to complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch do %>
 
-				<i class="fa fa-check">complete</i>
+				<i class="fa fa-check">\</i>
 			<% end %>
 		</div>
 		<div class="todo_item">
@@ -30,7 +30,7 @@
 		</div>
 		<div class="trash">
 			<%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
-				<i class="fa fa-trash">Delete</i>
+				<i class="fa fa-trash"></i>
 			<% end %>
 		</div>
 	<% end %>
